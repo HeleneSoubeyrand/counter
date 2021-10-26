@@ -1,7 +1,7 @@
 import React from "react";
 
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Counter from './components/Counter';
+import Counter1 from './components/Counter1.js';
 
 const titleStyle = {
   backgroundColor: "black",
@@ -32,7 +32,7 @@ class App extends React.Component {
     return (
       <>
       <h1 style={titleStyle}>COUNTER</h1>
-      <Counter count={this.state.count} substract={this.handleMinusClick} increment={this.handlePlusClick}/>
+      <Counter1 count={this.state.count} substract={this.handleMinusClick} increment={this.handlePlusClick}/>
       </> 
     )
   }

@@ -10,10 +10,9 @@ const countStyle = {
 }
 
 
-class Counter extends React.Component {
+class Counter1 extends React.Component {
     render() {
-        return (
-  
+        return ( 
         <div className="row justify-content-center mt-5">
             <Button variant="outline-success" className="col-3 mx-4" onClick={this.props.substract}>-</Button>
             <h2 style={countStyle} className="col-3 mx-4">{this.props.count}</h2>
@@ -25,4 +24,4 @@ class Counter extends React.Component {
 
 }
 
-export default Counter
+export default Counter1
