@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import 'bootstrap/dist/css/bootstrap.min.css'
+import Counter from './components/Counter';
+
+const titleStyle = {
+  backgroundColor: "black",
+  color: "white",
+  textAlign: "center"
 }
 
-export default App;
+class App extends React.Component {
+  constructor() {
+    super();
+
+    this.state = {
+      count: 0 
+    }
+  }
+
+  handleMinusClick = () => {
+    if (this.state.count > 0) {
+    this.setState({ count: this.state.count - 1 })
+    }
+  }
+
+  handlePlusClick = () => {
+    this.setState({ count: this.state.count + 1 })
+  }
+
+  render() {
+    return (
+      <>
+      <h1 style={titleStyle}>COUNTER</h1>
+      <Counter count={this.state.count} substract={this.handleMinusClick} increment={this.handlePlusClick}/>
+      </> 
+    )
+  }
+
+}
+
+
+export default App
