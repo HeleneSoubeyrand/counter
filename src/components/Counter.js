@@ -5,18 +5,18 @@ import Button from "react-bootstrap/Button"
 
 const countStyle = {
     marginbottom: 20,
-    fontSize: 100,
+    fontSize: 68,
     textAlign: "center"
 }
 
+class Counter extends React.Component {
 
-class Counter1 extends React.Component {
     render() {
         return ( 
         <div className="row justify-content-center mt-5">
-            <Button variant="outline-success" className="col-3 mx-4" onClick={this.props.substract}>-</Button>
+            <Button variant="danger" className="col-2 rounded-circle" onClick={() => this.props.substract(this.props.choice)}>-</Button>
             <h2 style={countStyle} className="col-3 mx-4">{this.props.count}</h2>
-            <Button variant="outline-danger" className=" col-3 mx-4" onClick={this.props.increment}>+</Button>
+            <Button variant="success" className="col-2 rounded-circle" onClick={() => this.props.increment(this.props.choice)}>+</Button>
         </div>
     
         )
@@ -24,4 +24,4 @@ class Counter1 extends React.Component {
 
 }
 
-export default Counter1
+export default Counter
