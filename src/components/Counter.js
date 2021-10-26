@@ -13,10 +13,10 @@ class Counter extends React.Component {
 
     render() {
         return ( 
-        <div className="row justify-content-center mt-5">
-            <Button variant="danger" className="col-2 rounded-circle" onClick={() => this.props.substract(this.props.choice)}>-</Button>
+        <div className="row justify-content-center my-3">
+            <Button variant="outline-danger" className="col-2 rounded-circle" onClick={() => this.props.substract(this.props.choice)}>-</Button>
             <h2 style={countStyle} className="col-3 mx-4">{this.props.count}</h2>
-            <Button variant="success" className="col-2 rounded-circle" onClick={() => this.props.increment(this.props.choice)}>+</Button>
+            <Button variant="outline-success" className="col-2 rounded-circle" onClick={() => this.props.increment(this.props.choice)}>+</Button>
         </div>
     
         )

@@ -3,7 +3,11 @@ import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Counter from './components/Counter';
 
-
+const borderStyle = {
+  border: "solid #9E9E9E 1px",
+  borderRadius: "20px",
+  boxShadow: "5px 5px 15px 5px #9E9E9E",
+}
 
 class App extends React.Component {
   constructor() {
@@ -39,9 +43,9 @@ class App extends React.Component {
   render() {
     return (
       <>
-      <div className="container border mt-5 pb-4 justify-content-center">
+      <div className="container mt-5 pb-4 justify-content-center" style={borderStyle}>
         <div className="row">
-          <h1 className="text-center bg-dark text-white py-2">Counter</h1>
+          <h1 className="text-center bg-dark text-white py-3" style={{borderTopLeftRadius: '20px', borderTopRightRadius: '20px'}}>Counter</h1>
         </div>
         <div className="row">
           <Counter choice="count1" count={this.state.count1} substract={this.handleMinusClick} increment={this.handlePlusClick}/>
